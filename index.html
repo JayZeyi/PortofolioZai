@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Portofolio - Zainal Ilmi</title>
+    <title>Creative Producer - Zainal Ilmi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
@@ -16,232 +16,263 @@
 </head>
 <body class="bg-slate-50 text-slate-900" x-data="{ openModal: false, modalImg: '' }">
 
+    <!-- Modal Image Viewer -->
     <div x-show="openModal" x-cloak x-transition class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4" @click="openModal = false">
         <img :src="modalImg" class="max-w-full max-h-full border-2 border-white">
-        <p class="absolute bottom-5 text-white/50 text-xs">Click anywhere to close</p>
+        <p class="absolute bottom-5 text-white/50 text-xs tracking-widest uppercase">Click anywhere to close</p>
     </div>
 
+    <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b-2 border-black">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="font-extrabold text-sm tracking-tighter uppercase">Journalz.</h1>
+            <h1 class="font-extrabold text-sm tracking-tighter uppercase">Zainal Ilmi.</h1>
             <div class="hidden md:flex space-x-6 text-[10px] font-bold uppercase tracking-widest">
-                <a href="#visual" class="hover:text-blue-600 transition">Visual</a>
-                <a href="#design" class="hover:text-blue-600 transition">Design</a>
-                <a href="#writing" class="hover:text-blue-600 transition">Writing</a>
-                <a href="#leadership" class="hover:text-blue-600 transition">Leadership</a>
-                <a href="#archive" class="hover:text-blue-600 transition">CV & Linkedin</a>
+                <a href="#production" class="hover:text-blue-600 transition">Production</a>
+                <a href="#photography" class="hover:text-blue-600 transition">Photography</a>
+                <a href="#strategy" class="hover:text-blue-600 transition">PR & Strategy</a>
+                <a href="#editorial" class="hover:text-blue-600 transition">Editorial</a>
+                <a href="#archive" class="hover:text-blue-600 transition">CV & Link</a>
             </div>
-                <div class="flex items-center gap-2">
-        <a href="https://wa.me/6285183242353" target="_blank" class="bg-[#25D366] text-white px-5 py-2 rounded-full text-[11px] font-bold hover:bg-black transition flex items-center gap-2 border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+            <div class="flex items-center gap-2">
+                 <a href="https://wa.me/6285183242353" target="_blank" class="bg-[#25D366] text-white px-5 py-2 rounded-full text-[11px] font-bold hover:bg-black transition flex items-center gap-2 border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.104-1.076a7.86 7.86 0 0 0 3.886 1.02h.001c4.368 0 7.926-3.559 7.93-7.93a7.85 7.85 0 0 0-2.33-5.688M7.994 14.52a6.57 6.57 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
             </svg>
             WhatsApp
         </a>
-        <a href="mailto:journal.zai@gmail.com" class="bg-black text-white px-5 py-2 rounded-full text-[11px] font-bold hover:bg-blue-600 transition shadow-[2px_2px_0px_0px_rgba(37,99,235,1)]">Email</a>
+        <a href="mailto:journal.zai@gmail.com" class="bg-black text-white px-5 py-2 rounded-full text-[11px] font-bold hover:bg-blue-600 transition shadow-[2px_2px_0px_0px_rgba(37,99,235,1)]">Hire Me</a>
     </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="pt-40 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
         <div class="flex-1">
             <div class="bg-yellow-accent inline-block px-3 py-1 mb-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <p class="font-bold text-[10px] uppercase tracking-widest text-black">Zainal Ilmi • Communication Science • ULM</p>
+                <p class="font-bold text-[10px] uppercase tracking-widest text-black">Banjarmasin, Indonesia</p>
             </div>
             <h2 class="serif text-5xl md:text-7xl leading-tight mb-8">
-                Content Writer <br>& <span class="italic text-slate-400">Visual Storyteller.</span>
+                Creative Producer <br>& <span class="italic text-slate-400">PR Strategist.</span>
             </h2>
             <p class="text-slate-600 max-w-xl text-lg leading-relaxed border-l-4 border-blue-600 pl-6 italic">
-                "Bridging the gap between analytical thinking and creative execution through words and lenses."
+                "Bridging the gap between strategic public relations and cinematic visual storytelling. I observe, I frame, and I lead the narrative."
             </p>
         </div>
 
+        <!-- The Metrics that matter -->
         <div class="w-full md:w-96 grid grid-cols-2 gap-4">
-            <div class="bg-black text-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(37,99,235,1)] flex flex-col items-center">
-                <span class="text-2xl font-black text-blue-400">3.90</span>
-                <span class="text-[8px] font-bold uppercase opacity-80 uppercase">GPA / IPK</span>
+            <div class="bg-black text-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(37,99,235,1)] flex flex-col items-center justify-center text-center">
+                <span class="text-2xl font-black text-blue-400">25M+</span>
+                <span class="text-[8px] font-bold uppercase opacity-80 mt-1">IDR Project Budget<br>(Line Producer)</span>
             </div>
-            <div class="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center">
+            <div class="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center text-center">
+                <span class="text-2xl font-black">8+</span>
+                <span class="text-[8px] font-bold uppercase text-slate-400 mt-1">Major Regional Events<br>(Media Partner)</span>
+            </div>
+            <div class="bg-yellow-accent border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center text-center">
+                <span class="text-2xl font-black uppercase">18</span>
+                <span class="text-[8px] font-bold uppercase text-black mt-1">Writers Supervised<br>(Bidikin)</span>
+            </div>
+            <div class="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center text-center">
                 <span class="text-2xl font-black">100+</span>
-                <span class="text-[8px] font-bold uppercase text-slate-400">Works Published</span>
-            </div>
-            <div class="bg-yellow-accent border-2 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center text-center">
-                <span class="text-2xl font-black uppercase">01</span>
-                <span class="text-[8px] font-bold uppercase text-black">Short Film (DOP)</span>
-            </div>
-               <div class="bg-yellow-accent border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center text-center">
-                <span class="text-lg font-black uppercase">Briet</span>
-                <span class="text-[8px] font-bold uppercase text-black">Media Division</span>
-             </div>
-            <div class="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center text-center">
-                <span class="text-2xl font-black">18</span>
-                <span class="text-[8px] font-bold uppercase text-slate-400">Writers Managed</span>
-            </div>
-            <div class="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center text-center">
-                <span class="text-2xl font-black">5+</span>
-                <span class="text-[8px] font-bold uppercase text-slate-400">Sport Events</span>
+                <span class="text-[8px] font-bold uppercase text-slate-400 mt-1">Articles Published</span>
             </div>
         </div>
     </header>
 
-  <section id="visual" class="py-20 px-6 bg-white border-t-2 border-black">
-    <div class="max-w-6xl mx-auto">
-        <h3 class="font-extrabold text-3xl mb-12 uppercase italic inline-block border-b-4 border-blue-600">Visual & Photography</h3>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="md:col-span-2 bg-black border-2 border-black relative group shadow-[8px_8px_0px_0px_rgba(37,99,235,1)]" x-data="{ play: false }">
-                <div x-show="!play" class="absolute inset-0 z-10 cursor-pointer" @click="play = true">
-                    <img src="https://lh3.googleusercontent.com/d/1Agr5Z1E-Vo9I2y2BASmNIXsXYJgXmiUb" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
-                        <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center border-2 border-white mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
-                        <span class="bg-white text-black text-[9px] font-bold px-2 py-1 uppercase">Watch: Goodbye Illyas (as DOP)</span>
-                    </div>
-                </div>
-                <div class="aspect-video w-full">
-                    <template x-if="play">
-                        <iframe class="w-full h-full" src="https://drive.google.com/file/d/1YmJknzM7MMgt_Zm0HWOR7Q5vXdCxzB9p/preview?autoplay=1" allow="autoplay"></iframe>
-                    </template>
-                </div>
-            </div>
-
-            <div class="bg-black border-2 border-black relative group shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <a href="https://www.instagram.com/reel/DFfaKo8P0d5/" target="_blank" class="block h-full relative overflow-hidden">
-                    <img src="https://lh3.googleusercontent.com/u/0/d/1iTuTuLnKqJSEBsQUnX9A1Ce5PDCRGrNX" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-4">
-                        <span class="text-white text-[10px] font-bold uppercase tracking-widest text-center">Farewell Film<br><span class="text-blue-400">(Executive Producer)</span></span>
-                    </div>
-                </a>
-            </div>
-
-            <div @click="openModal = true; modalImg = 'link-foto-1.jpg'" class="aspect-[3/4] border-2 border-black cursor-zoom-in relative group overflow-hidden bg-slate-100">
-                <img src="https://lh3.googleusercontent.com/u/0/d/1KIY_T0NhwbF9udAK3hHDiv4qTKmAaFwm" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                <div class="absolute bottom-0 w-full bg-black/70 p-3 opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
-                    <p class="text-white text-[9px] font-bold uppercase tracking-wider">Photography Work / 01</p>
-                </div>
-            </div>
-
-            <div @click="openModal = true; modalImg = 'link-foto-2.jpg'" class="aspect-[3/4] border-2 border-black cursor-zoom-in relative group overflow-hidden bg-slate-100">
-                <img src="https://lh3.googleusercontent.com/u/0/d/1HsOlhHSX4DQxCSdvezqMol1shl3ony7G" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                <div class="absolute bottom-0 w-full bg-black/70 p-3 opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
-                    <p class="text-white text-[9px] font-bold uppercase tracking-wider">Photography Work / 02</p>
-                </div>
-            </div>
-
-            <div @click="openModal = true; modalImg = 'link-foto-3.jpg'" class="aspect-[3/4] border-2 border-black cursor-zoom-in relative group overflow-hidden bg-slate-100">
-                <img src="https://lh3.googleusercontent.com/u/0/d/1yuwPXEuoMPoTz5qSkB0ujYsyiEzK1xVi" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                <div class="absolute bottom-0 w-full bg-black/70 p-3 opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
-                    <p class="text-white text-[9px] font-bold uppercase tracking-wider">Photography Work / 03</p>
-                </div>
-            </div>
-            </div>
-    </div>
-</section>
-
-    <section id="design" class="py-20 px-6 bg-blue-50 border-t-2 border-black">
+    <!-- Section 1: Film Production & Visuals -->
+    <section id="production" class="py-20 px-6 bg-white border-t-2 border-black">
         <div class="max-w-6xl mx-auto">
-            <h3 class="font-extrabold text-3xl mb-12 uppercase italic inline-block border-b-4 border-yellow-accent">Graphic Design</h3>
+            <h3 class="font-extrabold text-3xl mb-12 uppercase italic inline-block border-b-4 border-blue-600">Film Production & Directing</h3>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div @click="openModal = true; modalImg = 'link-poster-1.jpg'" class="aspect-[3/4] bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden cursor-zoom-in">
-                    <img src="https://lh3.googleusercontent.com/u/0/d/1GMkEcOtLsfqBYP0ZMmqKscib2LhnEIyp" class="w-full h-full object-cover">
-                </div>
-                <div @click="openModal = true; modalImg = 'link-poster-2.jpg'" class="aspect-[3/4] bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden cursor-zoom-in">
-                    <img src="https://lh3.googleusercontent.com/u/0/d/1-B8PNdM6CRnPXQ2nFETJEdHvJhig3tIP" class="w-full h-full object-cover">
-                </div>
-                <div @click="openModal = true; modalImg = 'link-poster-3.jpg'" class="aspect-[3/4] bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden cursor-zoom-in">
-                    <img src="https://lh3.googleusercontent.com/u/0/d/10rCmQodSiTddD7cC82iSTknXPvqmului" class="w-full h-full object-cover">
-                </div>
-            </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="md:col-span-2 h-48 bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(37,99,235,1)] relative overflow-hidden group">
-                    <img src="https://lh3.googleusercontent.com/u/0/d/1kZj7K4rBsHemrkwmYD6zbaLo-JoiZ9gZ" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-                    <div class="absolute inset-0 p-4 bg-gradient-to-t from-black/50 to-transparent flex items-end">
-                        <p class="text-white font-bold text-xs uppercase">Header Linkedin</p>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div @click="openModal = true; modalImg = 'logo-1.jpg'" class="aspect-square bg-white border-2 border-black flex items-center justify-center p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] cursor-zoom-in">
-                        <img src="https://lh3.googleusercontent.com/u/0/d/1yT8xXjTm2_T5JdxLwyZkJ3mx9lIDfIMa" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div @click="openModal = true; modalImg = 'logo-2.jpg'" class="aspect-square bg-white border-2 border-black flex items-center justify-center p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] cursor-zoom-in">
-                        <img src="https://lh3.googleusercontent.com/u/0/d/1yV5PmFrDo7klfy2wSFUWoOh-wCjfq5QN" class="max-w-full max-h-full object-contain">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="writing" class="py-20 px-6 bg-white border-t-2 border-black">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="font-extrabold text-3xl mb-12 uppercase italic inline-block border-b-4 border-blue-600">Writing & Editorial</h3>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="md:col-span-3 bg-yellow-accent p-8 border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-4">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                        <div class="flex-1">
-                            <h4 class="text-2xl font-black italic mb-2 uppercase">Coordinator Writer @ Bidikin.com</h4>
-                            <ul class="text-xs font-bold space-y-1 text-black/80">
-                                <li>⚡ Supervise & curate manuscripts from 18 contributing authors.</li>
-                                <li>⚡ Manage a total of 31+ works (articles, opinions, creative essays).</li>
-                                <li>⚡ Writing critical opinions on Bidikin.com media regularly.</li>
-                            </ul>
+                <!-- Highlight Video 1 -->
+                <div class="md:col-span-2 bg-black border-2 border-black relative group shadow-[8px_8px_0px_0px_rgba(37,99,235,1)]" x-data="{ play: false }">
+                    <div x-show="!play" class="absolute inset-0 z-10 cursor-pointer" @click="play = true">
+                        <img src="https://lh3.googleusercontent.com/d/1PVs__xhbjo-fTJzGdXAuyFSEMhd5ns70" class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/20 group-hover:bg-black/60 transition duration-300">
+                            <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center border-2 border-white mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M8 5v14l11-7z"/></svg>
+                            </div> 
+                            <span class="bg-white text-black text-[10px] font-black px-3 py-1 uppercase tracking-widest">BEM FISIP Profile (Director, Producer, & Editor)</span>
                         </div>
-                        <a href="https://docs.google.com/spreadsheets/d/18GdfQeHOmIt-hb52NxzLtcC8OMCGEjOWWY4l7IEn7z8/edit?usp=sharing" target="_blank" class="px-6 py-3 bg-black text-white font-bold text-[10px] uppercase shadow-[4px_4px_0px_0px_rgba(37,99,235,1)]">View Work Spreadsheet</a>
+                    </div>
+                    <div class="aspect-video w-full">
+                        <template x-if="play">
+                            <iframe class="w-full h-full" src="https://drive.google.com/file/d/1qtlDaUlFYNhSxvVwI57-KMaKClFAjI2m/preview?autoplay=1" allow="autoplay"></iframe>
+                        </template>
                     </div>
                 </div>
-                
-                <a href="https://docs.google.com/document/d/1RYV9TgzdBEKnBk9f3gDTOq3O2xNisRGUec4e0u1Z-9s/edit?usp=sharing" target="_blank" class="p-6 bg-slate-50 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all">
-                    <span class="text-[9px] font-black text-blue-600 border border-blue-600 px-2 py-0.5 uppercase">Juara 1</span>
-                    <h4 class="font-bold text-lg mt-3">Essay Sosiologi 2025</h4>
-                    <p class="text-sm text-slate-500 mt-4 leading-relaxed">Critical analysis of the phenomenon of literacy and art 2025.</p>
-                    <p class="text-[10px] font-black mt-4 underline uppercase">Read Article →</p>
-                </a>
-                <a href="https://medium.com/@journalz" target="_blank" class="p-6 bg-slate-50 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all">
-                    <span class="text-[9px] font-black text-blue-600 border border-blue-600 px-2 py-0.5 uppercase">85+ Works</span>
-                    <h4 class="font-bold text-lg mt-3">Medium Publications</h4>
-                    <p class="text-sm text-slate-500 mt-4 leading-relaxed">A collection of prose, poetry, and personal reflective essays.</p>
-                    <p class="text-[10px] font-black mt-4 underline uppercase">Visit Profile →</p>
-                </a>
-                <div class="p-6 bg-black text-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(250,204,21,1)] flex items-center italic text-sm">
-                    "Ensuring each article has a depth of research and style that aligns with the editorial vision."
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="leadership" class="py-20 px-6 bg-blue-50 border-t-2 border-black">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="font-extrabold text-3xl mb-12 uppercase italic inline-block border-b-4 border-black">Leadership</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                    <h4 class="font-black text-xl uppercase mb-4 leading-tight">Graduation Project Manager</h4>
-                    <p class="text-xs text-slate-600 mb-6 font-semibold">Managing the production of the farewell film and yearbook for MAN 3 Banjar with a budget of IDR 50M+.</p>
-                    <div class="grid grid-cols-2 gap-2">
-                        <img src="https://lh3.googleusercontent.com/u/0/d/1w3HbFoByPFiSrL0aJ6NSvnTlYyu1riS_" class="border border-black aspect-square object-cover">
-                        <img src="https://lh3.googleusercontent.com/u/0/d/1etTMquNfL64W7xylaX_M7x-mP9awas1a" class="border border-black aspect-square object-cover">
+                <!-- Highlight Project 2 -->
+                <div class="bg-yellow-accent border-2 border-black p-6 flex flex-col justify-between shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                    <div>
+                        <span class="text-[9px] font-black text-black border border-black px-2 py-0.5 uppercase tracking-widest mb-4 inline-block">Banua Film Fund 2026</span>
+                        <h4 class="font-black text-2xl uppercase leading-tight mb-2">Malamar Gawian Partama</h4>
+                        <p class="text-sm font-bold text-black/70 mb-4">Role: Line Producer</p>
+                        <p class="text-xs text-black/80 leading-relaxed mb-4">Managed production logistics, crew operations, and budgeting for a short film fully funded by the Banua Film Fund (IDR 25,000,000 grant).</p>
+                    </div>
+                    <a href="https://www.instagram.com/malamargawian.film" target="_blank" class="text-[10px] font-black uppercase underline hover:text-blue-600 transition">View Project Details →</a>
+                </div>
+
+           <!-- Highlight Project 3: Mencari Intan Poster -->
+                <div class="aspect-[4/5] border-2 border-black relative group overflow-hidden bg-slate-100 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                    <img src="https://lh3.googleusercontent.com/d/1w-e4rkTtf-gW21ScRQHtNtDO4hEwVOtC" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 w-full bg-black/80 py-2 px-3 opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                        <p class="text-white text-[9px] font-bold uppercase tracking-wider mb-1">Short Film Poster</p>
+                        <p class="text-blue-400 text-xs font-bold">"Mencari Intan"</p>
                     </div>
                 </div>
-                <div class="border-2 border-black p-8 bg-yellow-accent shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                    <h4 class="font-black text-xl uppercase mb-2">President of Student Council</h4>
-                    <p class="text-[9px] font-bold text-black/50 mb-6 uppercase tracking-widest">MAN 3 Banjar | 2023-2024</p>
-                    <ul class="text-sm space-y-3 font-bold">
-                        <li class="flex items-center gap-2">✅ Led 6+ major school events</li>
-                        <li class="flex items-center gap-2">✅ Coordinated 7+ Departments</li>
-                        <li class="flex items-center gap-2">✅ Managed large scale student activities</li>
+
+                <!-- Highlight Project 4: MV Staying Poster -->
+                <div class="aspect-[4/5] border-2 border-black relative group overflow-hidden bg-slate-100 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                    <img src="https://lh3.googleusercontent.com/d/198mU0_idkYBaxt4loTTSfN6Ef4ih_2zt" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 w-full bg-black/80 py-2 px-3 opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                        <p class="text-white text-[9px] font-bold uppercase tracking-wider mb-1">Music Video Poster</p>
+                        <p class="text-blue-400 text-xs font-bold">MV 'Staying'</p>
+                    </div>
+                </div>
+
+                <!-- Other Directing Works (Clickable List) -->
+                <div class="bg-yellow-accent border-2 border-black p-6 flex flex-col justify-center shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] aspect-[4/5]">
+                    <h4 class="font-black text-xl uppercase leading-tight mb-4">Other Directing Works</h4>
+                    <ul class="text-xs space-y-4 text-black/80 font-semibold">
+                        <li class="border-l-2 border-blue-600 pl-3">
+                            <a href="https://www.instagram.com/reel/DctG8ABAgzy/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" class="hover:text-blue-400 hover:underline transition-all cursor-pointer">Producer: "Mencari Intan" (Tourism Film)</a>
+                        </li>
+                        <li class="border-l-2 border-yellow-500 pl-3">
+                            <a href="https://drive.google.com/file/d/1rVj46_WX1gLQ7G_K8f_cM6004w9QGCzU/view?usp=sharing" target="_blank" class="hover:text-yellow-700 hover:underline transition-all cursor-pointer">Director: Non-official MV 'Staying'</a>
+                        </li> 
+                        <li class="border-l-2 border-green-500 pl-3">
+                            <a href="https://drive.google.com/file/d/1HE62plzU5WdDOyGKfoXZpTrYSZxLodax/view?usp=sharing" target="_blank" class="hover:text-green-700 hover:underline transition-all cursor-pointer">Director & Writer: Profil Desa Danda Jaya</a>
+                        </li> 
+                        <li class="border-l-2 border-red-500 pl-3">
+                            <a href="https://drive.google.com/file/d/1BZGeqitkrVsuLNPu32bH9vyXGwvBHZyM/view?usp=sharing" target="_blank" class="hover:text-red-700 hover:underline transition-all cursor-pointer">Videographer: GenRe Ambassador</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="archive" class="py-24 px-6 text-center border-t-2 border-black bg-white">
-        <h3 class="serif text-3xl italic mb-10">Curiosity meets creativity.</h3>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://drive.google.com/file/d/1jS2ZUkoBqbBAgtouR0E44isJLIZ3xvvb/view?usp=sharing" target="_blank" class="px-8 py-3 bg-yellow-accent text-black border-2 border-black font-black uppercase text-[10px] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 transition-all">Download CV (ATS)</a>
-            <a href="https://linkedin.com/in/journalz" target="_blank" class="px-8 py-3 border-2 border-black text-black font-black uppercase text-[10px] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 transition-all">LinkedIn</a>
+    <!-- Section 1.5: Visual Documentation (Event Photography) -->
+    <section id="photography" class="py-20 px-6 bg-slate-100 border-t-2 border-black">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="font-extrabold text-3xl mb-6 uppercase italic inline-block border-b-4 border-black">Visual Documentation</h3>
+            <p class="text-sm font-bold text-slate-600 mb-10 max-w-2xl">Selected event photography and media partner documentation as Creative Division Head at LabArt Communication. Capturing raw energy and spatial narratives.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Photo 1: Kuda Cahaya -->
+                <div @click="openModal = true; modalImg = 'https://lh3.googleusercontent.com/d/1K0pCnNZJQJ6s5vmJ6DzLeekscR2_7ubB'" class="aspect-[9/16] border-2 border-black cursor-zoom-in relative group overflow-hidden bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <img src="https://lh3.googleusercontent.com/d/1K0pCnNZJQJ6s5vmJ6DzLeekscR2_7ubB" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 w-full bg-black/80 py-2 px-3 opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                        <p class="text-white text-[9px] font-bold uppercase tracking-widest">Kuda Cahaya</p>
+                    </div> 
+                </div>
+
+                <!-- Photo 2: ArtSong System 9 -->
+                <div @click="openModal = true; modalImg = 'https://lh3.googleusercontent.com/d/1c7H8i4TWPlBz3IXnwrULeBjAFpnNC_0F'" class="aspect-[9/16] border-2 border-black cursor-zoom-in relative group overflow-hidden bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <img src="https://lh3.googleusercontent.com/d/1c7H8i4TWPlBz3IXnwrULeBjAFpnNC_0F" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 w-full bg-black/80 py-2 px-3 opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                        <p class="text-white text-[9px] font-bold uppercase tracking-widest">ArtSong System 9</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3: Duta Bahasa -->
+                <div @click="openModal = true; modalImg = 'https://lh3.googleusercontent.com/d/1rq6vOyQnbjqkMRTGpN86ogFtWLh30ElD'" class="aspect-[9/16] border-2 border-black cursor-zoom-in relative group overflow-hidden bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <img src="https://lh3.googleusercontent.com/d/1rq6vOyQnbjqkMRTGpN86ogFtWLh30ElD" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 w-full bg-black/80 py-2 px-3 opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                        <p class="text-white text-[9px] font-bold uppercase tracking-widest">Duta Bahasa</p>
+                    </div>
+                </div>
+
+                <!-- Photo 4: ASER -->
+                <div @click="openModal = true; modalImg = 'https://lh3.googleusercontent.com/d/1uaTl102NoTixdJjNWxAhJGj0eQN5VfIq'" class="aspect-[9/16] border-2 border-black cursor-zoom-in relative group overflow-hidden bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <img src="https://lh3.googleusercontent.com/d/1uaTl102NoTixdJjNWxAhJGj0eQN5VfIq" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 w-full bg-black/80 py-2 px-3 opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                        <p class="text-white text-[9px] font-bold uppercase tracking-widest">ASER Conference</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="mt-16 text-[10px] uppercase tracking-[0.5em] font-black">©2026 Zainal Ilmi</p>
+    </section>
+
+    <!-- Section 2: PR & Creative Strategy -->
+    <section id="strategy" class="py-20 px-6 bg-blue-50 border-t-2 border-black">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="font-extrabold text-3xl mb-12 uppercase italic inline-block border-b-4 border-yellow-accent">PR & Creative Strategy</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 class="font-black text-xl uppercase mb-2 leading-tight">Creative Division Head</h4>
+                    <p class="text-[10px] font-bold text-blue-600 mb-6 uppercase tracking-widest">LabArt Communication | 2025 - Present</p>
+                    <p class="text-sm text-slate-700 mb-6 font-medium leading-relaxed">Directed the creative and documentation team (PDD) acting as a strategic media partner for 8+ major regional events. Translated event atmospheres into compelling visual narratives.</p>
+                    <ul class="text-xs space-y-2 font-bold bg-slate-100 p-4 border border-slate-300">
+                        <li>⚡ Pameran Kuda Cahaya Banjarmasin</li>
+                        <li>⚡ Pemilihan Duta Bahasa Kalsel</li>
+                        <li>⚡ ASER 7th International Conference</li>
+                        <li>⚡ ArtSong System 9 Sanggar Seni Demokrat FISIP ULM</li>
+                    </ul>
+                </div>
+                
+                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-black text-xl uppercase mb-2 leading-tight">PR & Creative Media (HUMINFO)</h4>
+                        <p class="text-[10px] font-bold text-blue-600 mb-6 uppercase tracking-widest">BEM FISIP ULM | 2025 - Present</p>
+                        <p class="text-sm text-slate-700 mb-6 font-medium leading-relaxed">Served as the creative engine within the PR department, transforming organizational communication into high-quality digital storytelling.</p>
+                        <ul class="text-xs space-y-3 font-bold">
+                            <li class="flex items-start gap-2"><span class="text-yellow-500">▶</span> Single-handedly managed BEM's Instagram branding as PIC Design.</li>
+                            <li class="flex items-start gap-2"><span class="text-yellow-500">▶</span> Media Lead for 'KM FISIP Mengabdi': handled end-to-end production from logo to after-movie.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Editorial & Writing -->
+    <section id="editorial" class="py-20 px-6 bg-white border-t-2 border-black">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="font-extrabold text-3xl mb-12 uppercase italic inline-block border-b-4 border-black">Editorial Leadership</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <div class="md:col-span-2 bg-yellow-accent p-8 border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-black italic mb-2 uppercase">Editorial Coordinator</h4>
+                            <p class="text-[10px] font-bold text-black/60 mb-6 uppercase tracking-widest">Bidikin.com | May - Sept 2025</p>
+                            <ul class="text-sm font-bold space-y-2 text-black/80">
+                                <li class="flex items-center gap-2">✍️ Supervised & coordinated a team of 18 writers.</li>
+                                <li class="flex items-center gap-2">✍️ Managed the pipeline for 31 curated articles & works.</li>
+                                <li class="flex items-center gap-2">✍️ Authored 15 high-impact opinion pieces on youth issues.</li>
+                            </ul>
+                        </div>
+                        <a href="https://docs.google.com/spreadsheets/d/18GdfQeHOmIt-hb52NxzLtcC8OMCGEjOWWY4l7IEn7z8/edit?usp=sharing" target="_blank" class="px-6 py-4 bg-black text-white font-black text-[10px] uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(37,99,235,1)] hover:bg-blue-600 transition">View Editorial Data</a>
+                    </div>
+                </div>
+                
+                <a href="https://medium.com/@journalz" target="_blank" class="p-8 bg-slate-50 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(37,99,235,1)] hover:-translate-y-1 transition-all flex flex-col justify-between">
+                    <div>
+                        <span class="text-[9px] font-black text-white bg-black px-2 py-1 uppercase tracking-widest">Journalz (Medium)</span>
+                        <h4 class="font-bold text-xl mt-6 leading-tight">Independent Content Writer</h4>
+                        <p class="text-xs text-slate-500 mt-4 leading-relaxed font-medium">Authored 100+ comprehensive works. Cultivated an organic readership of 480+ followers with narrative essays and cultural observations.</p>
+                    </div>
+                    <p class="text-[10px] font-black mt-8 underline uppercase text-blue-600">Visit Profile →</p>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Archive -->
+    <footer id="archive" class="py-24 px-6 text-center border-t-2 border-black bg-white">
+        <h3 class="serif text-4xl italic mb-4">Bridging the Narrative.</h3>
+        <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-10">Available for freelance directing & strategic PR projects.</p>
+        
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://drive.google.com/file/d/1jS2ZUkoBqbBAgtouR0E44isJLIZ3xvvb/view?usp=sharing" target="_blank" class="px-8 py-4 bg-yellow-accent text-black border-2 border-black font-black uppercase text-[10px] tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform">Download CV (ATS)</a>
+            <a href="https://linkedin.com/in/journalz" target="_blank" class="px-8 py-4 border-2 border-black text-black font-black uppercase text-[10px] tracking-widest shadow-[4px_4px_0px_0px_rgba(37,99,235,1)] hover:-translate-y-1 transition-transform">Connect on LinkedIn</a>
+        </div>
+        <p class="mt-20 text-[9px] uppercase tracking-[0.5em] font-black text-slate-400">©2026 Zainal Ilmi. All Rights Reserved.</p>
     </footer>
 
 </body>
